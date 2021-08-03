@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oguz_\\source\\repos\\C#-simple\\C#-simple.csproj",
+      "projectUniqueName": "C:\\Users\\oguz_\\source\\repos\\oguzkose-GitHub\\C#-simple\\C#-simple.csproj",
       "projectName": "C#-simple",
-      "projectPath": "C:\\Users\\oguz_\\source\\repos\\C#-simple\\C#-simple.csproj",
+      "projectPath": "C:\\Users\\oguz_\\source\\repos\\oguzkose-GitHub\\C#-simple\\C#-simple.csproj",
       "packagesPath": "C:\\Users\\oguz_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oguz_\\source\\repos\\C#-simple\\obj\\",
+      "outputPath": "C:\\Users\\oguz_\\source\\repos\\oguzkose-GitHub\\C#-simple\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\oguz_\\AppData\\Roaming\\NuGet\\NuGet.Config",
