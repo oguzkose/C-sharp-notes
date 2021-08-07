@@ -128,8 +128,84 @@ namespace C__simple
             //     var added = i % 2 == 1 ? unEvenNumbers += i : evenNumbers += i;
             // }
 
-            // System.Console.WriteLine("0'dan"+" "+ number + "'a kadar olan tek sayıların toplamı"+ " " + unEvenNumbers);
+            // System.Console.WriteLine("0'dan"+" "+ number + "'a kadar olan tek sayıların toplamı"+ " " + unEvenNumbers); 
             // System.Console.WriteLine("0'dan"+" "+ number + "'a kadar olan çift sayıların toplamı"+ " " + evenNumbers);
+
+            /*----------foreach ----------------*/
+            // string[] cars = {"BMW","Audi","Nissan","Mercedes"};
+
+            // foreach (var item in cars)
+            // {
+            //     System.Console.WriteLine(item);
+            // }
+            /*-----------ARRAYS------------*/
+            // string[] colors = new string[2];
+
+            // colors[0]="red";
+            // colors[1]="black";
+
+            // foreach (var item in colors)
+            // {
+            // System.Console.WriteLine(item);    
+            // }
+
+            // int [] numbers ={1,2,3,4,5};
+            // foreach (var item in numbers)
+            // {
+            //     System.Console.WriteLine(item);
+            // }
+
+            //Sort()
+            // int [] numbers ={5,7,9,3,1,456};
+            //  Array.Sort(numbers); // arrayin elemanlarını kçükten büyüğe sırala
+            //  foreach (var item in numbers)
+            //  {
+            //      System.Console.WriteLine(item);
+            //  }
+            //  //Clear() 
+            //  Array.Clear(numbers,2,3); //numbers arrayinin [2] indexinden başlayp 3 elemanını sıfırla
+            //  foreach (var item in numbers)
+            //  {
+            //      System.Console.WriteLine(item);
+            //  }
+            //  //Reverse()
+            //  Array.Reverse(numbers); //dizinin elemanlarını sondan başa doğru sırala
+            //  foreach (var item in numbers)
+            //  {
+            //      System.Console.WriteLine(item);
+            //  }
+
+            //  //IndexOf()
+            //  System.Console.WriteLine(Array.IndexOf(numbers,456));
+
+            //  //Resize()
+            //  Array.Resize<int>(ref numbers,7);
+            //  numbers[6]=100;
+
+            // foreach (var item in numbers)
+            // {
+            //     System.Console.WriteLine(item);
+            // }
+
+            /*-----------Metotlar-------------*/
+            // int a = 2;
+            // int b = 3;
+
+            // Metotlar metotlar = new Metotlar();
+
+            // System.Console.WriteLine(metotlar.Topla(ref a, ref b));
+
+
         }
     }
+ 
+    // class Metotlar
+    // {
+    //     public int Topla(ref int numb1, ref int numb2)
+    //     {
+    //         numb1 += 1;
+    //         numb2 += 1;
+    //         return numb1 + numb2;
+    //     }
+    // }
 }

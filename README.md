@@ -143,3 +143,107 @@
             System.Console.WriteLine("0'dan"+" "+ number + "'a kadar olan çift sayıların toplamı"+ " " + evenNumbers);
 
 ```
+## Foreach Loop 
+- Bir Collection yapısının elemanları içinde dönmeye yarar
+
+```csharp
+            string[] cars = {"BMW","Audi","Nissan","Mercedes"};
+            
+            foreach (var item in cars)
+            {
+                System.Console.WriteLine(item);
+            }
+
+```
+## Arrays
+
+```csharp
+            string[] colors = new string[2];
+            
+            colors[0]="red";
+            colors[1]="black";
+
+            foreach (var item in colors)
+            {
+            System.Console.WriteLine(item);    
+            }
+
+```
+```csharp
+            int [] numbers ={1,2,3,4,5};
+            foreach (var item in numbers)
+            {
+                System.Console.WriteLine(item);
+            }
+```
+- Sort() Clear() Reverse() IndexOf() Resize<>() Metotları
+```csharp
+            //Sort() metotu ile arrayin elemanları küçükten büyüğe sıralanır.
+            int [] numbers ={5,7,9,3,1,456};
+             Array.Sort(numbers); sırala
+             foreach (var item in numbers)
+             {
+                 System.Console.WriteLine(item);
+             }
+             //Clear() 
+             Array.Clear(numbers,2,3); //numbers arrayinin [2] indexinden başlayp 3 elemanını sıfırla
+             foreach (var item in numbers)
+             {
+                 System.Console.WriteLine(item);
+             }
+             //Reverse() metotu ile dizinin elemanları sondan başa doğru sıranır.
+             Array.Reverse(numbers); 
+             foreach (var item in numbers)
+             {
+                 System.Console.WriteLine(item);
+             }
+        
+             //IndexOf() metotu ile diziye ait elemanın hangi index'te olduğu bulunur.
+             System.Console.WriteLine(Array.IndexOf(numbers,456));
+        
+             //Resize() metotu ile dizinin kapasitesi yeniden belirtilebilir.
+             Array.Resize<int>(ref numbers,7);
+             numbers[6]=100;
+            
+            foreach (var item in numbers)
+            {
+                System.Console.WriteLine(item);
+            }
+```
+# Methods
+## Method Overloading
+- Bir metotun ismini çok defa kullanarak parametrelerinde değişiklik yapıp metotlara overloadingler yapılabilir.  
+
+```csharp
+        class Methods
+        {
+            public void PrintToScreen(string name)
+            {
+                System.Console.WriteLine(name);
+            }
+
+            public void PrintToScreen(int number)
+            {
+                System.Console.WriteLine(number);
+            }
+
+            public void PrintToScreen(int number, int number2)
+            {
+                System.Console.WriteLine(number + number2);
+            }
+        }
+```
+Program.cs
+```csharp
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Methods methods = new();
+                
+                methods.PrintToScreen("oğuz");
+                methods.PrintToScreen(29);
+                methods.PrintToScreen(10, 20);
+            }
+        }
+```
