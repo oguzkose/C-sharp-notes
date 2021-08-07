@@ -291,7 +291,7 @@ Program.cs
             }
         }
 ```
-- Recursive (öz-yinelemeli) Methods
+## Recursive (öz-yinelemeli) Methods
  ```csharp
         class Program
         {
