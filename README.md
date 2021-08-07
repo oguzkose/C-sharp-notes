@@ -211,8 +211,52 @@
             }
 ```
 # Methods
+- Metotlar iki yapıdadır. Değer döndüren ve değer döndürmeyen metotlar. Aynı şekilde parametre alan ve parametre almayan olarak kendi içinde ikiye ayrılır.
+```csharp
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    //değer döndüren , parametre alan metot 
+                    static int Sum(int number1, int number2)
+                    {
+                        return number1 + number2;
+                    }
+
+                    int result = Sum(3, 5);
+                    System.Console.WriteLine(result);
+
+
+                    //değer döndüren , parametre almayan metot
+                    static int Division()
+                    {
+                        int a = 8;
+                        int b = 4;
+                        return a/b;
+                    }
+
+                    System.Console.WriteLine(Division());
+
+
+                    //değer döndürmeyen , parametre almayan
+                    static void Print()
+                    {
+                        System.Console.WriteLine("Hello World");
+                    }
+                    Print();
+
+                    //değer döndürmeyen , parametre alan
+                    static void SayHi(string message)
+                    {
+                        System.Console.WriteLine(message);
+                    }
+                    SayHi("Hiiiii");
+                }
+            }
+        
+``` 
 ## Method Overloading
-- Bir metotun ismini çok defa kullanarak parametrelerinde değişiklik yapıp metotlara overloadingler yapılabilir.  
+- Bir metotun ismini çok defa kullanarak, parametrelerinde değişiklik yapıp metotlar olusşturulabilir, metotlara Aşırı yüklemeler yapılabilir.  
 
 ```csharp
         class Methods
@@ -240,10 +284,37 @@ Program.cs
             static void Main(string[] args)
             {
                 Methods methods = new();
-                
+
                 methods.PrintToScreen("oğuz");
                 methods.PrintToScreen(29);
                 methods.PrintToScreen(10, 20);
+            }
+        }
+```
+- Recursive (öz-yinelemeli) Methods
+ ```csharp
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                // 2^7 ifadesinin değerini bulunuz
+                int Expo(int baseValue, int topValue)
+                {
+                    return topValue < 2 ? baseValue 
+                    : Expo(baseValue, topValue - 1) * baseValue;
+                }
+
+                int result = Expo(2, 7);
+                System.Console.WriteLine(result);
+
+                // Faktöriyel hesaplama
+                static int Factorial(int number)
+                {
+                    return number == 1 ? number
+                    : number * Factorial(number - 1);
+                }
+                int result = Factorial(6);
+                System.Console.WriteLine(result); // Output : 720
             }
         }
 ```
