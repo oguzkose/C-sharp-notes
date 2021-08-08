@@ -318,3 +318,54 @@ Program.cs
             }
         }
 ```
+## Extension Methods
+- Instance alınmadan erişebilmek için extension metotların kendisi ve ait olduğu class static olmalı. ve parametrede this anahtar kelimesi yazılmalıdır.
+Program.cs
+```csharp
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                string sentence = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+                bool result = sentence.AnySpace();
+                System.Console.WriteLine(result);
+
+                System.Console.WriteLine(sentence.RemoveWhiteSpaces());
+
+                System.Console.WriteLine(sentence.MakeUpperCase());
+
+                System.Console.WriteLine(sentence.MakeLowerCase()); 
+            }
+        }
+```
+Extension.cs
+```csharp
+            static class Extension
+            {
+                //string metin boşluk içeriyor mu?
+                public static bool AnySpace(this string sentence)
+                {
+                    return sentence.Contains(" ");
+                }
+
+                // metinde ki tüm boşlukları kaldır
+                public static string RemoveWhiteSpaces(this string sentence)
+                {
+                    string[] joining = sentence.Split(" ");// arasında boşluk olan tüm ifadeleri dizi içine al.
+                    return string.Join("", joining);// dizideki tüm elemanların arasında boşluk olmayacak şekilde birleştir
+                }
+
+                public static string MakeUpperCase(this string sentence)
+                {
+                    return sentence.ToUpper();
+                }
+
+                public static string MakeLowerCase(this string sentence)
+                {
+                    return sentence.ToLower();
+                }
+
+            }
+
+```
