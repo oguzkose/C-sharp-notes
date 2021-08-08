@@ -195,10 +195,112 @@ namespace C__simple
 
             // System.Console.WriteLine(metotlar.Topla(ref a, ref b));
 
+            //değer döndüren , parametre alan metot 
+            // static int Sum(int number1, int number2)
+            // {
+            //     return number1 + number2;
+            // }
+
+            // int result = Sum(3, 5);
+            // System.Console.WriteLine(result);
+
+            // //değer döndüren , parametre almayan metot
+
+            // static int Division(){
+            //     int a = 8;
+            //     int b = 4;
+            //     return a/b;
+            // }
+
+            // System.Console.WriteLine(Division());
+
+            // //değer döndürmeyen , parametre almayan
+            // static void Print(){
+            //     System.Console.WriteLine("Hello World");
+            // }
+            // Print();
+
+            // //değer döndürmeyen , parametre alan
+            // static void SayHi(string message){
+            //     System.Console.WriteLine(message);
+            // }
+            // SayHi("Hiiiii");
+
+            /*--------RECURSİVE METHODS-----------*/
+            //2^5 2 üzeri 5 in sonucunu recursive metot ile yapınız
+
+            //2*2*2*2*2
+            // static int Expo(int baseValue, int topValue)
+            // {
+            //     return topValue < 2 ? baseValue 
+            //     : Expo(baseValue, topValue - 1) * baseValue;
+            // }
+
+            // int result = Expo(2, 7);
+            // System.Console.WriteLine(result);
+
+            //3!
+
+            // static int Factorial(int number)
+            // {
+            //     // return number == 1 ? number
+            //     // : number * Factorial(number - 1);
+
+            //     if (number == 1)
+            //     {
+            //         return number;
+            //     }
+            //     return number * Factorial(number - 1);
+            // }
+            // int result = Factorial(7);
+            // System.Console.WriteLine(result); 
+
+            /*------------EXTENSİON METHODS-----------------*/
+
+            //Cümle içinde boşluk var mı?
+
+            // string sentence = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+            // bool result = sentence.AnySpace();
+            // System.Console.WriteLine(result);
+
+            // System.Console.WriteLine(sentence.RemoveWhiteSpaces());
+
+            // System.Console.WriteLine(sentence.MakeUpperCase());
+
+            // System.Console.WriteLine(sentence.MakeLowerCase());
+
+
 
         }
     }
- 
+    // Instance alınmadan erişebilmek için extension metotların kendisi ve ait olduğu class static olmalı. ve parametrede this anahtar kelimesi yazılmalı
+    // static class Extension
+    // {
+    //     //string metin boşluk içeriyor mu?
+    //     public static bool AnySpace(this string sentence)
+    //     {
+    //         return sentence.Contains(" ");
+    //     }
+
+    //     // metinde ki tüm boşlukları kaldır
+    //     public static string RemoveWhiteSpaces(this string sentence)
+    //     {
+    //         string[] joining = sentence.Split(" ");// arasında boşluk olan tüm ifadeleri dizi içine al.
+    //         return string.Join("", joining);// dizideki tüm elemanların arasında boşluk olmayacak şekilde birleştir
+    //     }
+    //     public static string MakeUpperCase(this string sentence)
+    //     {
+    //         return sentence.ToUpper();
+    //     }
+    //     public static string MakeLowerCase(this string sentence)
+    //     {
+    //         return sentence.ToLower();
+    //     }
+
+    // }
+
+
     // class Metotlar
     // {
     //     public int Topla(ref int numb1, ref int numb2)
