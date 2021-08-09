@@ -471,7 +471,7 @@ Program.cs
             }
 ```
 
-- ArrayList'lerde sık kullanılan metotlar
+- ArrayList'lerde sık kullanılan metotlar Add(), AddRange(), Sort(), Reverse(), Clear(), BinarySearch()
 
 ```csharp
             ArrayList differentObjects = new ArrayList();
@@ -487,3 +487,20 @@ Program.cs
                 System.Console.WriteLine(item);
             }
 ```
+## Dictionary
+- Key ,Value mantığı ile çalışan Collection yapısıdır.
+```csharp
+            Dictionary<int,string> users = new Dictionary<int, string>();
+
+            users.Add(1,"Oğuz Köse");
+            users.Add(2,"Lars Ulrich");
+            users.Add(3,"David Gilmour");
+
+            var result = users[1];
+            System.Console.WriteLine(result); // Output: Oğuz Köse
+
+            foreach (var item in users)
+            {
+                System.Console.WriteLine(item.Value);
+            }
+``` 

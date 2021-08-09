@@ -360,18 +360,34 @@ namespace C__simple
             //     System.Console.WriteLine(item);
             // }
 
-            ArrayList differentObjects = new ArrayList();
+            // ArrayList differentObjects = new ArrayList();
 
-            List<int> numbers = new() { 1, 2, 3, 4, 5 };
-            differentObjects.AddRange(numbers);
+            // List<int> numbers = new() { 1, 2, 3, 4, 5 };
+            // differentObjects.AddRange(numbers);
             
-            string[] colors = { "yellow", "red", "blue" };
-            differentObjects.AddRange(colors);
+            // string[] colors = { "yellow", "red", "blue" };
+            // differentObjects.AddRange(colors);
 
-            foreach (var item in differentObjects)
-            {
-                System.Console.WriteLine(item);
-            }
+            // foreach (var item in differentObjects)
+            // {
+            //     System.Console.WriteLine(item);
+            // }
+            /*-----------------DICTIONARY--------------------*/
+
+            // Dictionary<int,string> users = new Dictionary<int, string>();
+            // users.Add(1,"Oğuz Köse");
+            // users.Add(2,"Lars Ulrich");
+            // users.Add(3,"David Gilmour");
+
+            // var result = users[1];
+            // System.Console.WriteLine(result); //Output : Oğuz Köse
+
+            // foreach (var item in users)
+            // {
+            //     System.Console.WriteLine(item.Value);
+            // }
+
+
 
         }
     }
