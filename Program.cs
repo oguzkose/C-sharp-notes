@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace C__simple
 {
@@ -270,10 +272,114 @@ namespace C__simple
 
             // System.Console.WriteLine(sentence.MakeLowerCase());
 
+            // List<User> userList = new List<User>();
 
+            //userList e user eklemek için 1.YOL
+            // User user1 = new();
+            // user1.Age=15;
+            // user1.Name="Ali";
+
+            // User user2 = new();
+            // user2.Age=15;
+            // user2.Name="Veli";
+
+            // userList.Add(user1);
+            // userList.Add(user2);
+            // foreach (var user in userList)
+            // {
+            //     System.Console.WriteLine(user.Name + " " + user.Age);
+            // };
+
+
+            //userList e user eklemek için 1.YOL
+
+            //  userList.Add(new User
+            //  {
+            //      Name = "Oğuz",
+            //      Age = 15
+            //  });
+            //  userList.Add(new User
+            //  {
+            //      Name = "Veli",
+            //      Age = 25
+            //  });
+
+            //    //Farklı Foreach kullanımı:
+            //     userList.ForEach(user => System.Console.WriteLine(user.Name + " " + user.Age));
+            //String tip List
+            // List<string> animals = new List<string> { "cat", "dog" };
+            // animals.ForEach(animal => System.Console.WriteLine(animal));
+
+            // //Int tip List
+            // List<int> numbers = new() { 1, 2, 3, 4, 5 };
+            // numbers.ForEach(number => System.Console.WriteLine(number));
+
+            // List<int> numbers = new List<int>();
+            // // Add() eleman ekler
+            // numbers.Add(1);
+            // numbers.Add(2);
+            // numbers.Add(3);
+            // numbers.ForEach(item => System.Console.WriteLine(item));//Output: 1,2,3
+
+            // numbers.Remove(2); // 2 elemanını siler
+            // numbers.ForEach(item => System.Console.WriteLine(item)); //Output: 1,3
+
+            // numbers.RemoveAt(0); // index numarasına göre siler
+            // numbers.ForEach(item => System.Console.WriteLine(item));//Output: 3
+
+            // numbers.Clear(); // Listeyi temizler
+
+            // List<string> animals = new() { "dog", "cat", "rabbit", "tiger" };
+
+            // bool result = animals.Contains("tiger"); // Contains ile aranılan eleman var mı bakılır. Bool döner.
+            // System.Console.WriteLine(result);//Output: True
+
+            // int inWhichIndex = animals.BinarySearch("rabbit");// BinarySearch() ile elemanın hangi indexte olduğu bulunabilir.
+            // System.Console.WriteLine(inWhichIndex);// Output:2
+
+            //Array i List' e çevirme
+
+            // string[] car = { "Volvo", "BMW", "Audi" };
+            // System.Console.WriteLine(car[0]);
+
+            // List<string> carList = new List<string>(car);
+
+            // carList.ForEach(item => System.Console.WriteLine(item));
+
+            /*-----------ARRAYLİST---------------*/
+
+            // ArrayList differentObjects = new ArrayList();
+
+            // differentObjects.Add("Oğuz");
+            // differentObjects.Add(15);
+            // differentObjects.Add(true);
+            // differentObjects.Add(23.9);
+
+            // foreach (var item in differentObjects)
+            // {
+            //     System.Console.WriteLine(item);
+            // }
+
+            ArrayList differentObjects = new ArrayList();
+
+            List<int> numbers = new() { 1, 2, 3, 4, 5 };
+            differentObjects.AddRange(numbers);
+            
+            string[] colors = { "yellow", "red", "blue" };
+            differentObjects.AddRange(colors);
+
+            foreach (var item in differentObjects)
+            {
+                System.Console.WriteLine(item);
+            }
 
         }
     }
+    // public class User
+    // {
+    //     public string Name { get; set; }
+    //     public int Age { get; set; }
+    // }
     // Instance alınmadan erişebilmek için extension metotların kendisi ve ait olduğu class static olmalı. ve parametrede this anahtar kelimesi yazılmalı
     // static class Extension
     // {

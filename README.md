@@ -369,3 +369,121 @@ Extension.cs
             }
 
 ```
+# Collections
+- Referans tiptir. Dezavantajı : Değer tipinde bir  veriyi (örneğin int) boxing ile collection yapısına yerleştiririz. Ardından veriyi çağırdığımızda unboxing yaparız. Bu durum RAM maliyetini artırır. En sık kullanılan Collection, List'tir.  
+## List
+- List generic yapısı içinde birden çok veriyi veya object'i (class gibi) barındırabilen yapılardır. Kısaca syntax'i şöyledir : 
+- List< T > listName = new List< T >();
+
+```csharp
+        //String tip List
+        List<string> animals = new List<string> { "cat", "dog" };
+        animals.ForEach(animal => System.Console.WriteLine(animal));
+            
+        //Int tip List
+        List<int> numbers = new() { 1, 2, 3, 4, 5 };
+        numbers.ForEach(number => System.Console.WriteLine(number));
+```
+- Sık kullanılan metotları ise : Add() Remove() RemoveAt() Contains() BinarySearch() Clear()
+```csharp
+        List<int> numbers = new List<int>();
+            // Add() eleman ekler
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.ForEach(item => System.Console.WriteLine(item));//Output: 1,2,3
+
+            numbers.Remove(2); // 2 elemanını siler
+            numbers.ForEach(item => System.Console.WriteLine(item)); //Output: 1,3
+
+            numbers.RemoveAt(0); // index numarasına göre siler
+            numbers.ForEach(item => System.Console.WriteLine(item));//Output: 3
+
+            numbers.Clear(); // Listeyi temizler
+
+        List<string> animals = new() { "dog", "cat", "rabbit", "tiger" };
+
+            bool result = animals.Contains("tiger"); // Contains ile aranılan eleman var mı bakılır. Bool döner.
+            System.Console.WriteLine(result);//Output: True
+
+            int inWhichIndex = animals.BinarySearch("rabbit");// BinarySearch() ile elemanın hangi indexte olduğu bulunabilir.
+            System.Console.WriteLine(inWhichIndex);// Output:2
+
+        
+```
+- List'ler içinde class barındırabilir
+
+User.cs
+```csharp
+            public class User
+            {
+                public string Name { get; set; }
+                public int Age { get; set; }
+            }
+```
+Program.cs
+```csharp
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    List<User> userList = new List<User>();
+
+                    userList.Add(new User
+                    {
+                        Name = "Oğuz",
+                        Age = 25
+                    });
+
+                    userList.Add(new User
+                    {
+                        Name = "Ahmet",
+                        Age = 35
+                    });
+
+                    userList.ForEach(user => System.Console.WriteLine(user.Name + " " + user.Age))
+                }
+            }
+```
+- string Array'i List' e çevirme
+```csharp
+            string[] car = { "Volvo", "BMW", "Audi" };
+            System.Console.WriteLine(car[0]);
+
+            List<string> carList = new List<string>(car);
+            carList.ForEach(item => System.Console.WriteLine(item));//Output: Volvo, BMW, Audi
+```
+
+## ArrayList
+- içinde farklı tipteki bir çok object barındırabilen collection yapısıdır.
+
+```csharp
+            ArrayList differentObjects = new ArrayList();
+
+            differentObjects.Add("Oğuz");
+            differentObjects.Add(15);
+            differentObjects.Add(true);
+            differentObjects.Add(23.9);
+
+            foreach (var item in differentObjects)
+            {
+                System.Console.WriteLine(item);
+            }
+```
+
+- ArrayList'lerde sık kullanılan metotlar
+
+```csharp
+            ArrayList differentObjects = new ArrayList();
+            
+            List<int> numbers = new() { 1, 2, 3, 4, 5 };
+            differentObjects.AddRange(numbers); //AddRange ile birden fazla veri eklenebilir.
+
+            string[] colors = { "yellow", "red", "blue" };
+            differentObjects.AddRange(colors); //ArrayListlere List<> veya Array eklenebilir.
+
+            foreach (var item in differentObjects)
+            {
+                System.Console.WriteLine(item);
+            }
+```
